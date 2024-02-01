@@ -1,0 +1,19 @@
+<div class="text-bg-primary py-5 text-center">
+  <div class="container py-5">
+    <h1>Thinker App</h1>
+    <p class="lead">A place for random thoughts and innovative ideas</p>
+  </div>
+</div>
+
+<h1>Posts</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path %>
